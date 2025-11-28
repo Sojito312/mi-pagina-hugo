@@ -3,7 +3,7 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main  # se ejecuta cuando haces push a la rama main
+      - main  # se ejecuta al hacer push a main
 
 jobs:
   build-deploy:
@@ -20,13 +20,14 @@ jobs:
         with:
           hugo-version: '0.149.0'
 
-      # 3. Construir el sitio
+      # 3. Construir el sitio desde la carpeta portafolio
       - name: Build Hugo site
-        run: hugo --minify
+        run: hugo --minify --source ./portafolio
 
       # 4. Publicar en GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./portafolio/public
+
