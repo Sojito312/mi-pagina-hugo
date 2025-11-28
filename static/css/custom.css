@@ -1,0 +1,14 @@
+body {
+    background-color: #cce0ff; /* azul clarito */
+    color: #003366;            /* texto oscuro */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}

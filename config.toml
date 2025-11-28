@@ -1,0 +1,7 @@
+baseURL = "/"
+languageCode = "es-mx"
+title = "Mi Página Hugo"
+theme = "ananke"
+
+[params]
+  custom_css = ["css/custom.css"]
